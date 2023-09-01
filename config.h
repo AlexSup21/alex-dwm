@@ -60,17 +60,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
-/*static const char *operacmd[] = { "opera", NULL };*/
 static const char *slockcmd[] = { "slock", NULL };
-/*static const char *snipcmd[] = { "sleep 0.2 ; scrot -s /home/alex/images/screenshots/'%F_%H%M%S.png'", NULL };
-static const char *snipcmd[] = { "sleep 0.2 ; scrot -s", NULL };*/
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	/*{ MODKEY|ShiftMask,			    XK_s,	   spawn,	       {.v = snipcmd } },*/
-	{ MODKEY,			            XK_q,	   spawn,	       {.v = slockcmd } },
-	/*{ MODKEY,			            XK_o,	   spawn,	       {.v = operacmd } },*/
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+    { MODKEY,                       XK_q,      spawn,          {.v = slockcmd } },
+    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,            	        XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
